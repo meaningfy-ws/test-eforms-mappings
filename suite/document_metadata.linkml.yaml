@@ -1,0 +1,73 @@
+id: https://publications.data.eu/schema/eforms/document_metadata
+name: eForms Document Metadata
+prefixes:
+  linkml: https://w3id.org/linkml/
+  metadata: https://publications.data.eu/schema/eforms/document_metadata/
+  epo: http://data.europa.eu/a4g/ontology#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dct: http://purl.org/dc/terms/
+imports:
+  - linkml:types
+default_range: string
+default_prefix: metadata
+
+classes:
+  Notice:
+    class_uri: epo:Notice
+    slots:
+      - title
+      - long_title
+      - notice_publication_number
+      - publication_date
+      - ojs_issue_number
+      - ojs_type
+      - city_of_buyer
+      - name_of_buyer
+      - original_language
+      - country_of_buyer
+      - eu_institution
+      - document_sent_date
+      - deadline_for_submission
+      - notice_type
+      - form_type
+      - place_of_performance
+      - extracted_legal_basis_directive
+      - legal_basis_directive
+      - form_number
+      - eforms_subtype
+      - xsd_version
+      - published_in_cellar_counter
+      - notice_source
+      - eform_sdk_version
+
+
+slots:
+  title:
+    required: true
+    description: document tile
+    slot_uri: dct:title
+  long_title:
+  notice_publication_number:
+  publication_date:
+  ojs_issue_number:
+  ojs_type:
+  city_of_buyer:
+    required: false
+  name_of_buyer:
+  original_language:
+  country_of_buyer:
+  eu_institution:
+  document_sent_date:
+    range: date
+  deadline_for_submission:
+  notice_type:
+  form_type:
+  place_of_performance:
+  extracted_legal_basis_directive:
+  legal_basis_directive:
+  form_number:
+  eforms_subtype:
+  xsd_version:
+  published_in_cellar_counter:
+  notice_source:
+  eform_sdk_version:
