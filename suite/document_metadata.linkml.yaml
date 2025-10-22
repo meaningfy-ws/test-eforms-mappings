@@ -40,7 +40,6 @@ classes:
       - notice_source
       - eform_sdk_version
 
-
 slots:
   title:
     required: true
