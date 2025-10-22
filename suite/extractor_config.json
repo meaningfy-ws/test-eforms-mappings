@@ -4,22 +4,130 @@
     "xpath": "./cac:ProcurementProject/cbc:Name",
     "extraction_method": "text"
   }]
-}, {
-  "field_key": "title",
+},
+{
+  "field_key": "title_country",
   "field_extractors": [{
-    "xpath": "manifestation_ns:CODED_DATA_SECTION/manifestation_ns:REF_OJS/manifestation_ns:DATE_PUB",
+    "xpath": ".//cac:ProcurementProject/cac:RealizedLocation/cac:Address/cac:Country/cbc:IdentificationCode[@listName='country']",
     "extraction_method": "text"
-  }, {
-    "xpath": "manifestation_ns:CODED_DATA_SECTION/manifestation_ns:CODIF_DATA/manifestation_ns:NC_CONTRACT_NATURE",
-    "extraction_method": "attibute_and_text",
-    "atribute_name": "CODE"
-  }, {
-    "xpath": "manifestation_ns:TRANSLATION_SECTION/manifestation_ns:ML_TITLES/",
-    "extraction_method": "attibute_and_text",
-    "atribute_name": "LG"
-  }, {
-    "xpath": "manifestation_ns:TRANSLATION_SECTION/manifestation_ns:ML_TITLES/",
-    "extraction_method": "attibute_and_text",
-    "atribute_name": "languageID"
   }]
-}]
+},
+{
+  "field_key": "publication_date",
+  "field_extractors": [{
+    "xpath": ".//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:PublicationDate",
+    "extraction_method": "text"
+  }]
+},
+{
+  "field_key": "publication_number",
+  "field_extractors": [{
+    "xpath": ".//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:NoticePublicationID[@schemeName='ojs-notice-id']",
+    "extraction_method": "text"
+  }]
+},
+{
+  "field_key": "ojs_issue_number",
+  "field_extractors": [{
+    "xpath": ".//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:GazetteID",
+    "extraction_method": "text"
+  }]
+},
+{
+  "field_key": "original_language",
+  "field_extractors": [{
+    "xpath": ".//cbc:NoticeLanguageCode",
+    "extraction_method": "text"
+    }]
+},
+{
+  "field_key": "document_sent_date",
+  "field_extractors": [{
+    "xpath": ".//cbc:IssueDate",
+    "extraction_method": "text"
+    }]
+},
+{
+  "field_key": "type_of_contract",
+  "field_extractors": [{
+    "xpath": "./cac:ProcurementProject/cbc:ProcurementTypeCode[@listName='contract-nature']",
+    "extraction_method": "text"
+    }]
+},
+{
+  "field_key": "type_of_procedure",
+  "field_extractors": [{
+    "xpath": ".//cac:TenderingProcess/cbc:ProcedureCode[@listName='procurement-procedure-type']",
+    "extraction_method": "text"
+    }]
+},
+{
+  "field_key": "place_of_performance",
+  "field_extractors": [{
+    "xpath": ".//cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:CountrySubentityCode[@listName='nuts']",
+    "extraction_method": "text"
+    }]
+},
+{
+  "field_key": "place_of_performance_elements",
+  "field_extractors": [{
+    "xpath": ".//efac:Organizations/efac:Organization/efac:Company/cac:PostalAddress/cbc:CountrySubentityCode[@listName='nuts']",
+    "extraction_method": "text"
+    }]
+},
+{
+  "field_key": "common_procurement_elements",
+  "field_extractors": [{
+    "xpath": ".//cac:ProcurementProject/*/cbc:ItemClassificationCode[@listName='cpv']",
+    "extraction_method": "text"
+  }]
+},
+{
+  "field_key": "internet_address",
+  "field_extractors": [{
+    "xpath": ".//cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment/cac:ExternalReference/cbc:URI",
+    "extraction_method": "text"
+  }]
+},
+{
+  "field_key": "legal_basis_directive",
+  "field_extractors": [{
+    "xpath": ".//cbc:RegulatoryDomain",
+    "extraction_method": "text"
+  }]
+},
+{
+  "field_key": "notice_subtype",
+  "field_extractors": [
+    {
+      "xpath": ".//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode[@listName='notice-subtype']",
+      "extraction_method": "text"
+    },
+    {
+      "xpath": ".//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode",
+      "extraction_method": "text"
+    }
+  ]
+},
+{
+  "field_key": "form_type",
+  "field_extractors": [{
+    "xpath": ".//cbc:NoticeTypeCode",
+    "extraction_method": "text"
+  }]
+},
+{
+  "field_key": "notice_type",
+  "field_extractors": [{
+    "xpath": ".//cbc:NoticeTypeCode",
+    "extraction_method": "text"
+  }]
+},
+{
+  "field_key": "eform_sdk_version",
+  "field_extractors": [{
+    "xpath": ".//cbc:CustomizationID",
+    "extraction_method": "text"
+  }]
+}
+]
