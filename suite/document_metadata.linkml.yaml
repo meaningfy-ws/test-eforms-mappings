@@ -12,7 +12,7 @@ default_range: string
 default_prefix: metadata
 
 classes:
-  Notice:
+  eFormsNoticeMetadata:
     class_uri: epo:Notice
     slots:
       - title

@@ -16,7 +16,7 @@ classes:
       - extractor_config
       - eligibility_constraint_config
 
-  Extracor:
+  Extractor:
     slots:
       - field_key
       - field_extractors
@@ -26,7 +26,7 @@ classes:
     slots:
       - xpath
       - extraction_method
-      - atribute_name
+      - attribute_name
 
   EligibilityConstraint:
     slots:
@@ -47,7 +47,7 @@ slots:
   eligibility_constraint_config:
     range: EligibilityConstraint
   extractor_config:
-    range: Extracor
+    range: Extractor
 
 enums:
   ExtractionMethod:
