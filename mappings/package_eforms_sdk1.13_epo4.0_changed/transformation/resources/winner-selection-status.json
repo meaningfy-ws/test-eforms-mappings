@@ -17,37 +17,37 @@
         },
         "conceptURI": {
           "type": "uri",
-          "value": "http://publications.europa.eu/resource/authority/accessibility/OP_DATPRO"
+          "value": "http://publications.europa.eu/resource/authority/winner-selection-status/OP_DATPRO"
         }
       },
       {
         "code": {
           "type": "literal",
-          "value": "inc"
+          "value": "clos-nw"
         },
         "conceptURI": {
           "type": "uri",
-          "value": "http://publications.europa.eu/resource/authority/accessibility/inc"
+          "value": "http://publications.europa.eu/resource/authority/winner-selection-status/clos-nw"
         }
       },
       {
         "code": {
           "type": "literal",
-          "value": "n-inc"
+          "value": "open-nw"
         },
         "conceptURI": {
           "type": "uri",
-          "value": "http://publications.europa.eu/resource/authority/accessibility/n-inc"
+          "value": "http://publications.europa.eu/resource/authority/winner-selection-status/open-nw"
         }
       },
       {
         "code": {
           "type": "literal",
-          "value": "n-inc-just"
+          "value": "selec-w"
         },
         "conceptURI": {
           "type": "uri",
-          "value": "http://publications.europa.eu/resource/authority/accessibility/n-inc-just"
+          "value": "http://publications.europa.eu/resource/authority/winner-selection-status/selec-w"
         }
       }
     ]
