@@ -14,7 +14,7 @@
             "start_date": null,
             "end_date": null,
             "eforms_sdk_versions": [
-                "1.9"
+                "eforms-sdk-1.9"
             ]
         }
     },
