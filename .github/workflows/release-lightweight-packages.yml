@@ -40,6 +40,7 @@ env:
   FROM_VERSION: ${{ inputs.from_version || 'v2' }}
   TO_VERSION: ${{ inputs.to_version || 'v3L' }}
   MAPPINGS_FOLDER: ${{ inputs.mappings_folder || 'mappings/' }}
+  PYTHON_VERSION: '3.12'
 
 permissions:
   contents: write
@@ -56,7 +57,7 @@ jobs:
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Install MSSDK
         run: pip install git+https://github.com/meaningfy-ws/mapping-suite-sdk.git@${{ env.MSSDK_REF }}
