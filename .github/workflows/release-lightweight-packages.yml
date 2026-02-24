@@ -41,6 +41,9 @@ env:
   TO_VERSION: ${{ inputs.to_version || 'v3L' }}
   MAPPINGS_FOLDER: ${{ inputs.mappings_folder || 'mappings/' }}
 
+permissions:
+  contents: write
+
 jobs:
   build-and-attach-lightweight-packages:
     name: Build and attach lightweight packages
