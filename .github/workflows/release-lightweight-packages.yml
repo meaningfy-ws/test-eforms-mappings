@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Dry run — upload ZIPs as workflow artefacts instead of release assets'
+        description: 'Dry run — upload ZIPs as workflow artifacts instead of release assets'
         required: false
         default: 'true'
         type: choice
@@ -83,7 +83,7 @@ jobs:
         with:
           files: dist/*.zip
 
-      - name: Upload ZIP bundle as workflow artefact (dry run)
+      - name: Upload ZIP bundle as workflow artifact (dry run)
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == 'true' }}
         uses: actions/upload-artifact@v4
         with:
