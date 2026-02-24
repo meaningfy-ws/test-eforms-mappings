@@ -83,7 +83,7 @@ jobs:
         with:
           files: dist/*.zip
 
-      - name: Upload ZIPs as workflow artefacts (dry run)
+      - name: Upload ZIP bundle as workflow artefact (dry run)
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == 'true' }}
         uses: actions/upload-artifact@v4
         with:
