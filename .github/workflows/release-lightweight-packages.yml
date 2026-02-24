@@ -72,12 +72,7 @@ jobs:
         run: |
           mkdir -p dist/
           for pkg_dir in ${{ env.MAPPINGS_FOLDER }}*/; do
-            metadata="${pkg_dir}metadata.json"
-            if [ -f "$metadata" ]; then
-              pkg_name=$(python3 -c "import json; print(json.load(open('${metadata}'))['identifier'])")
-            else
-              pkg_name=$(basename "$pkg_dir")
-            fi
+            pkg_name=$(basename "$pkg_dir")
             zip -r "dist/${pkg_name}.zip" "$pkg_dir"
             echo "Zipped: dist/${pkg_name}.zip"
           done
