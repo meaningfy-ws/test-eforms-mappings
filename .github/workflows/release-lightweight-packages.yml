@@ -59,8 +59,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install MSSDK
-        run: |
-          pip install git+https://github.com/meaningfy-ws/mapping-suite-sdk.git@${{ env.MSSDK_REF }}
+        run: pip install git+https://github.com/meaningfy-ws/mapping-suite-sdk.git@${{ env.MSSDK_REF }}
 
       - name: Convert mapping packages
         run: |
@@ -83,16 +82,11 @@ jobs:
             echo "Zipped: dist/${pkg_name}.zip"
           done
 
-      - name: List produced ZIP files
-        run: ls -lh dist/
-
       - name: Upload ZIPs as release assets
         if: ${{ github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false') }}
         uses: softprops/action-gh-release@v2
         with:
           files: dist/*.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload ZIPs as workflow artefacts (dry run)
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == 'true' }}
