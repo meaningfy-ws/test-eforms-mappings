@@ -98,6 +98,6 @@ jobs:
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == 'true' }}
         uses: actions/upload-artifact@v4
         with:
-          name: lightweight-packages-dry-run
+          name: lightweight-packages-${{ github.run_number }}
           path: dist/*.zip
           retention-days: 7
