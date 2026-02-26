@@ -277,9 +277,15 @@
   },
   "resource_references": {
     "file_paths": [
-      "/src/transformation/resources/winner-selection-status.json",
       "/src/normalisation/eforms_mapping.csv",
-      "/src/normalisation/sforms_mapping.csv"
+      "/src/normalisation/sforms_mapping.csv",
+      "/src/normalisation/df_filter_map.csv",      
+      "/src/transformation/resources/country.json",
+      "/src/transformation/resources/form_type.json",
+      "/src/transformation/resources/languages.json",
+      "/src/transformation/resources/legal_basis.json",
+      "/src/transformation/resources/notice_type.json",
+      "/src/transformation/resources/nuts.json"
     ]
   }
 }
